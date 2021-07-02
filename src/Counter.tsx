@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./styles.css";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -7,8 +8,8 @@ const Counter = () => {
     setCount((prev) => prev + 1);
   };
   return (
-    <div>
-      <button onClick={handleClick}>Count:{count}</button>
+    <div className="btn__wrapper">
+      <button onClick={handleClick}>Count: {count}</button>
     </div>
   );
 };

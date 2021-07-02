@@ -1,9 +1,45 @@
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #52006a;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.img__wrapper {
+  display: flex;
+  margin: 2rem auto;
+  justify-content: center;
 }
 
 img {
   width: 400px;
   height: auto;
+}
+
+.btn__wrapper {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  text-align: center;
+  background-color: #52006a;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #52006a;
+  background-color: white;
+  border: 1px solid #52006a;
 }

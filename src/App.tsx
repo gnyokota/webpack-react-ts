@@ -8,8 +8,11 @@ const App = () => {
     <>
       <h1>React typescript webpack starter template</h1>
       <h2>{process.env.name}</h2>
-      <img src={image} alt="about us logo" />
-      <img src={logo} alt="video call logo" />
+      <div className="img__wrapper">
+        <img src={image} alt="about us logo" />
+        <img src={logo} alt="video call logo" />
+      </div>
+
       <Counter />
     </>
   );
