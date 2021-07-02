@@ -18,6 +18,20 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        // asset/resource emits a separate file and exports the URL. Previously achievable by using file-loader
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        // asset/inline exports a data URI of the asset. Previously achievable by using url-loader.
+        type: "asset/inline",
+      },
     ],
   },
   output: {
