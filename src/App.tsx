@@ -1,3 +1,4 @@
+import Counter from "./Counter";
 import "./styles.css";
 import image from "./undraw.png";
 import logo from "./undraw_svg.svg";
@@ -9,6 +10,7 @@ const App = () => {
       <h2>{process.env.name}</h2>
       <img src={image} alt="about us logo" />
       <img src={logo} alt="video call logo" />
+      <Counter />
     </>
   );
 };
