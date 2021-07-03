@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const { isBundle } = require('typescript');
+const CopyPlugin = require('copy-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -43,5 +45,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),
     }),
+    //copy static content from src folder to build folder
+    new CopyPlugin({
+      patterns: [{ from: 'src', to: 'build' }],
+    }),
+    //it allows me to analyze the size of my bundle files
+    new BundleAnalyzerPlugin(),
   ],
 };
