@@ -4,6 +4,7 @@ import image from './undraw.png';
 import logo from './undraw_svg.svg';
 
 const App = () => {
+  const name = 'something';
   return (
     <div>
       <h1>React typescript webpack starter template</h1>
